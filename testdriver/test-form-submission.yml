@@ -1,0 +1,21 @@
+version: 4.2.18
+session: 67d206bb6c034d81f8c8badd
+steps:
+  - prompt: Navigate to a form page on a different website.
+    commands:
+      - command: hover-text
+        text: test.xyz
+        description: address bar in Google Chrome
+        action: click
+      - command: press-keys
+        keys:
+          - control
+          - a
+      - command: press-keys
+        keys:
+          - backspace
+      - command: type
+        text: example.com/form
+      - command: press-keys
+        keys:
+          - enter
