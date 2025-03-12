@@ -1,0 +1,45 @@
+version: 4.2.18
+session: 67d206c3688455a08d68ad15
+steps:
+  - prompt: >-
+      Navigate back to the original website  # Use the content of the file from
+      the environment
+    commands:
+      - command: press-keys
+        keys:
+          - alt
+          - left
+  - prompt: >-
+      Navigate back to the original website  # Use the content of the file from
+      the environment
+    commands:
+      - command: hover-text
+        text: Reload
+        description: reload button on the error page
+        action: click
+  - prompt: >-
+      Navigate back to the original website  # Use the content of the file from
+      the environment
+    commands:
+      - command: hover-text
+        text: test.xyz
+        description: address bar with the current URL
+        action: click
+      - command: type
+        text: correctwebsite.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Navigate back to the original website  # Use the content of the file from
+      the environment
+    commands:
+      - command: hover-text
+        text: correctwebsite.com
+        description: address bar with the current URL
+        action: click
+      - command: type
+        text: originalwebsite.com
+      - command: press-keys
+        keys:
+          - enter
