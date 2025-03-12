@@ -1,0 +1,13 @@
+version: 4.2.18
+session: 67d206ca688455a08d68ad21
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Attempt to reload the page.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - r
