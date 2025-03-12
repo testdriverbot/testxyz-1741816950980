@@ -1,0 +1,57 @@
+version: 4.2.18
+session: 67d206ca688455a08d68ad23
+steps:
+  - prompt: Navigate to a different website.
+    commands:
+      - command: hover-text
+        text: test.xyz
+        description: current URL in the address bar
+        action: click
+      - command: type
+        text: www.example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Attempt to access the main navigation menu.
+    commands:
+      - command: hover-image
+        description: menu icon in the top left corner of the browser window
+        action: click
+  - prompt: Attempt to access the main navigation menu.
+    commands:
+      - command: hover-image
+        description: menu icon in the top left corner of the browser window
+        action: click
+  - prompt: Attempt to access the main navigation menu.
+    commands:
+      - command: hover-image
+        description: menu icon in the top left corner of the browser window
+        action: click
+  - prompt: Attempt to access the main navigation menu.
+    commands:
+      - command: hover-image
+        description: menu icon in the top left corner of the browser window
+        action: click
+  - prompt: Attempt to access the main navigation menu.
+    commands:
+      - command: hover-text
+        text: example.com
+        description: address bar in the browser
+        action: click
+      - command: type
+        text: www.google.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that the navigation menu loads correctly.  # Use the content of the
+      file from the environment
+    commands:
+      - command: hover-text
+        text: Gmail
+        description: link in the top right navigation
+        action: hover
+      - command: assert
+        expect: the navigation menu is visible with Gmail and Images links
