@@ -1,0 +1,42 @@
+version: 4.2.18
+session: 67d206cf6c034d81f8c8baed
+steps:
+  - prompt: Navigate to a different website with a search function.
+    commands:
+      - command: hover-text
+        text: test.xyz
+        description: current URL in the address bar
+        action: click
+      - command: type
+        text: www.bing.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Focus the search input field.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search input field on Bing homepage
+        action: click
+  - prompt: Focus the search input field.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search input field on Bing homepage
+        action: click
+  - prompt: Enter a search query.
+    commands:
+      - command: type
+        text: latest news
+  - prompt: Click the "Search" button.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search button on Bing
+        action: click
+  - prompt: >-
+      Assert that relevant results are displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: Breaking News is displayed
